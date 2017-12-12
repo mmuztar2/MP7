@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Hangman {
 	
 	/**List of possible words that you may need to guess for hangman*/
-	public static String[] possibleWords = {"computer science", "machine", "processor", "java", 
+	public static final String[] possibleWords = {"computer science", "machine", "processor", "java", 
 			"python", "byte", "bit", "pixel", "computer", "lollipop", "marshmallow", "word", 
 			"cupcake", "cookie", "honeycomb", "ice cream", "ice cream sandwich", "nougat",
 			"gingerbread", "candy cane", "jelly bean", "kitkat", "program", "data",
@@ -161,7 +161,7 @@ public class Hangman {
 	 * @return whether the player guessed what they guessed previously
 	 */
 	public static boolean guessUsed(String newGuess, ArrayList<String> previousGuesses) {
-		for (int i = 0; i < previousGuesses.size() - 1; i++) {
+		for (int i = 0; i < previousGuesses.size(); i++) {
 			if (newGuess.equals(previousGuesses.get(i))) {
 				return true;
 			}
@@ -175,7 +175,7 @@ public class Hangman {
 	 */
 	public static void printGuessesUsed(ArrayList<String> previousGuesses) {
 		if (!previousGuesses.isEmpty()) {
-			System.out.println("You have already used the following words/letters:");
+			System.out.println("You have used the following words/letters:");
 		}
 		for (int i = 0; i < previousGuesses.size(); i++) {
 			System.out.print("'" + previousGuesses.get(i) + "'" + " ");
