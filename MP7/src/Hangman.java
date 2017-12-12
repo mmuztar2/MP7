@@ -198,7 +198,7 @@ public class Hangman {
 	}
 	
 	/**
-	 * 
+	 * Replaces the blank spaces with letters the player guessed correctly
 	 * @param word the word needed to be guessed
 	 * @param letter the letter the player guessed
 	 * @param dashes the underscore representation of the word needed to be guessed
@@ -218,7 +218,7 @@ public class Hangman {
 	}
 	
 	/**
-	 * 
+	 * Checks to see if all blank spaces have been filled. If so, the player has won
 	 * @param dashes underscore representation of the word needed to be guessed
 	 * @return if the underscores in the underscore representation of the word are filled
 	 */
